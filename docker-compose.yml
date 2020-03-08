@@ -17,7 +17,7 @@ services:
     networks:
       - haste-tier
     volumes:
-      - /tmp/redis:/bitnami/redis/data:z
+      - .:/bitnami/redis/data:z
   
   haste:
     build: .
