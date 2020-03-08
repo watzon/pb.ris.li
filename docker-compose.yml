@@ -1,0 +1,31 @@
+version: '2'
+
+networks:
+  haste-tier:
+    driver: bridge
+
+volumes:
+  data-volume:
+    driver: local
+
+services:
+  redis:
+    image: 'bitnami/redis:latest'
+    restart: always
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    networks:
+      - haste-tier
+    volumes:
+      - /tmp/redis:/bitnami/redis/data:z
+  
+  haste:
+    build: .
+    restart: always
+    depends_on:
+      - "redis"
+    ports:
+      - "7777:7777"
+    networks:
+      - haste-tier
+
