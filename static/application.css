@@ -1,5 +1,5 @@
 body {
-	background: #002B36;
+	background: #282828;
 	padding: 20px 50px;
 	margin: 0px;
 }
@@ -62,24 +62,25 @@ textarea {
 #box1 {
 	padding: 5px;
 	text-align: center;
-	background: #00222b;
+	background: #3c3836;
 }
 
 #box2 {
-	background: #08323c;
+	background: #504945;
 	font-size: 0px;
 	padding: 0px 5px;
 }
 
 #box1 a.logo, #box1 a.logo:visited {
 	display: inline-block;
-	background: url(logo.png);
-	width: 126px;
-	height: 42px;
+	color: #fbf1c7;
+    text-decoration: none;
+    font-style: italic;
+    font-size: 1.8em;
 }
 
 #box1 a.logo:hover {
-	background-position: 0 bottom;
+	color: #ebddb2;
 }
 
 #box2 .function {
